@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+}
+.main_container {
+  height: 100vh;
+  background-color: hsl(233, 47%, 7%);
+  display: flex;
+  align-items: center;
+  place-content: center;
+}
+
+[class^="box-"] {
+  background-color: hsl(244, 38%, 16%);
+  width: 30vw;
+  height: 50vh;
+}
+.box-1 {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2% 0% 0% 2% / 2% 0% 0% 2%;
+}
+.box-1 h1 {
+  flex-grow: 1;
+  font-size: 1.8vw;
+  color: hsl(0, 0%, 100%);
+}
+.box-1 p {
+  flex-grow: 1;
+  line-height: 1.5vw;
+  font-size: 0.9vw;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+.box-1 span {
+  color: hsl(277, 64%, 61%);
+}
+.box-1 div {
+  display: flex;
+  flex-grow: 2;
+}
+[class^="part-"] {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+[class^="part-"] h1 {
+  font-size: 1.5vw;
+  color: hsl(0, 0%, 100%);
+}
+[class^="part-"] p {
+  font-size: 0.8vw;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+.box-2 {
+  border-radius: 0% 2% 2% 0% / 0% 2% 2% 0%;
+}
+.box-2 img {
+  height: 100%;
+  width: 100%;
+  filter: invert(8%) sepia(98%) saturate(500%) hue-rotate(216deg)
+    brightness(75%) contrast(90%);
+  border-radius: 0% 2% 2% 0% / 0% 2% 2% 0%;
+}
+.part-1 h1,
+.part-1 p,
+.part-2 h1,
+.part-2 p,
+.part-3 h1,
+.part-3 p {
+  flex-grow: 0;
+}
+@media only screen and (max-width: 375px) {
+  .main_container {
+    flex-direction: column-reverse;
+  }
+  .box-2 {
+    height: 38vh;
+    width: 90vw;
+    border-radius: 2% 2% 0% 0% / 2% 2% 0% 0%;
+  }
+  .box-2 img {
+    border-radius: 2% 2% 0% 0% / 2% 2% 0% 0%;
+  }
+  .box-1 {
+    height: 58vh;
+    width: 90vw;
+    border-radius: 0% 0% 2% 2% / 0% 0% 2% 2%;
+    padding: 2.5rem;
+  }
+  .box-1 h1 {
+    font-size: 25px;
+    text-align: center;
+  }
+  .box-1 p {
+    line-height: 20px;
+    font-size: 15px;
+    text-align: center;
+  }
+  .box-1 div {
+    flex-direction: column;
+  }
+  [class^="part-"] h1 {
+    font-size: 20px;
+  }
+  [class^="part-"] p {
+    font-size: 14px;
+  }
+}
